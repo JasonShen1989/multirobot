@@ -3,8 +3,10 @@
 #### 介绍
 多机器人项目空地协同编队ros代码。2020.11.26
 
+
 #### 项目说明
 一个飞机、两个车、一个地面站、一个路由器、一套uwb
+本ros包是地面站运行的ros程序，车上运行的是pibot公司提供的ros包 roslaunch pibot_bringup bringup_with_imu.launch
 
 地面站（我的笔记本）:
 1、运行roscore，作为rosmaster。
@@ -18,7 +20,7 @@
 
 车0：（ros_master改成地面站）
 1、NUC工控机或者充电宝给tag标签供电。
-2、工控机运行一个rosnode（bringup_with_imu):订阅速度指令控制小车前进的node，读取stm32的磁罗盘数据并发布。
+2、工控机运行ros节点（bringup_with_imu.launch):订阅速度指令控制小车前进的node，读取stm32的磁罗盘数据并发布。
 
 车1：
 同车0
