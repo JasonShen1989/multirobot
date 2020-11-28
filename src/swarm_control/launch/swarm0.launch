@@ -1,0 +1,17 @@
+<launch>
+	<include file="$(find nlink_parser)/launch/linktrack.launch" >
+	</include>
+
+	<node pkg="swarm_control" type="car0_node" name="car0_node" output="screen">
+		<param name="expectPos_carx_v1" value ="1.8"/>
+		<param name="expectPos_cary_v1" value ="1"/>
+		<param name="expectPos_carx_v2" value ="1.5"/>
+		<param name="expectPos_cary_v2" value ="0"/>
+		<param name="vel_P" value ="3.0"/>
+		<param name="vel_D" value ="0"/>
+		<param name="vel_I" value ="0"/>
+		<param name="w_P" value ="0.05"/>
+	</node>
+
+
+</launch>

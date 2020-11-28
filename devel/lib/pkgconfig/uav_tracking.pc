@@ -1,0 +1,8 @@
+prefix=/home/shupeixuan/multirobot/devel
+
+Name: uav_tracking
+Description: Description of uav_tracking
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

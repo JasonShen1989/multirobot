@@ -1,0 +1,9 @@
+ssh nj@CAR0
+
+ssh nj@CAR1
+
+ssh nj@CAR2
+
+roslaunch pibot_bringup bringup_with_imu.launch
+
+rostopic pub /command std_msgs/Int32 "data: 0"

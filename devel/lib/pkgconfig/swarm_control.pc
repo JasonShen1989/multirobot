@@ -1,0 +1,8 @@
+prefix=/home/shupeixuan/multirobot/devel
+
+Name: swarm_control
+Description: Description of swarm_control
+Version: 0.0.0
+Cflags: -I/home/shupeixuan/multirobot/src/swarm_control/include
+Libs: -L${prefix}/lib 
+Requires: 
