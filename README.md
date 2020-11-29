@@ -62,7 +62,8 @@ nlink_parser 的ros包编译前要先安装nlink的serial包!还要安装ros-mel
 否则运行roslaunch nlink_parser linktrack.launch 会报错  
 /home/shupeixuan/linktrack_ws/devel/lib/nlink_parser/linktrack: error while loading shared libraries: libserial.so: cannot open shared object file: No such file or directory  
 
-2、下载本项目的multirobot_ws文件夹，并在该文件夹下编译catkin_make即可，里面包含三个小车的控制节点  
+2、下载本项目的multirobot_ws文件夹，并在该文件夹下编译catkin_make，并在~/.bashrc中最后一行添加环境变量  
+  export ${your multirobot_ws}/multirobot_ws/devel/setup.bash
 
 3、使用时运行以下sh文件即可启动nlink_parser标签读取和三个小车的控制节点：  
 cd ${your multirobot_ws path}/multirobot_ws/src/swarm_control/readme  
@@ -76,7 +77,8 @@ rostopic pub /command std_msgs/Int32 "data: 0" 可以发布控制指令。
   5（车全停但不改变车头期望方向）可选  
 
 ##### CAR0：
-1、下载本项目的pibot_ws文件夹，并在该文件夹下编译catkin_make即可，里面包含小车的驱动以及读取stm32磁罗盘的节点等等  
+1、下载本项目的pibot_ws文件夹，并在该文件夹下编译catkin_make，并在~/.bashrc中最后一行添加环境变量  
+  export ${your pibot_ws}/pibot_ws/devel/setup.bash 
 2、修改pibot_ws/pibot_bringup/launch/bringup_with_imu.launch，在<launch>下一行加上<group ns="car0">。并在</launch>上一行加上</group>,这样命名空间就在car0下了，所有话题前都会多一个car0/  
 3、使用时运行roslaunch pibot_bringup bringup_with_imu.launch即可  
 
