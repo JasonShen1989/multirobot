@@ -1,0 +1,96 @@
+<robot
+  name="pibot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0027565 4.4925E-07 -0.009736"
+        rpy="0 0 0" />
+      <mass
+        value="6.031" />
+      <inertia
+        ixx="0.13189"
+        ixy="-2.3229E-07"
+        ixz="-0.00034689"
+        iyy="0.11074"
+        iyz="2.3612E-09"
+        izz="0.20986" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/hadesX/base_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/hadesX/base_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="-0.0017532 9.7056E-08 0.018369"
+        rpy="0 0 0" />
+      <mass
+        value="0.17932" />
+      <inertia
+        ixx="8.4489E-05"
+        ixy="7.2842E-12"
+        ixz="3.6373E-06"
+        iyy="7.9944E-05"
+        iyz="-3.7959E-10"
+        izz="0.00011884" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/hadesX/laser_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.10196 0.10196 0.10196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/hadesX/laser_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.13 0 0.088"
+      rpy="0 -6.123E-17 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

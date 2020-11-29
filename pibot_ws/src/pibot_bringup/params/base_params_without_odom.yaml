@@ -1,0 +1,13 @@
+port: /dev/pibot
+buadrate: 921600
+
+base_frame: base_link
+odom_frame: odom
+odom_topic: odom
+
+publish_tf: false
+# topic
+cmd_vel_topic: cmd_vel
+
+#pid debug
+out_pid_debug_enable: false

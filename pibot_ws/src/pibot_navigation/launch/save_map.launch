@@ -1,0 +1,7 @@
+<launch>
+
+  <arg name="map_name" default="my_lab" />
+
+  <node name="map_saver" pkg="map_server" type="map_saver" args="-f $(find pibot_navigation)/maps/$(arg map_name)"/>
+
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+  <arg name="lidar" default="$(env PIBOT_LIDAR)" doc="lidar type [rplidar, eai-x4, eai-g4]"/>
+
+  <include file="$(find pibot_bringup)/launch/bringup_with_imu.launch"/>
+  <include file="$(find pibot_bringup)/launch/model.launch"/>
+
+  <include file="$(find pibot_bringup)/launch/$(arg lidar).launch"/>
+
+</launch>

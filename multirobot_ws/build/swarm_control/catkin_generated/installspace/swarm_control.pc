@@ -1,8 +1,0 @@
-prefix=/home/shupeixuan/multirobot/install
-
-Name: swarm_control
-Description: Description of swarm_control
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

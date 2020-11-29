@@ -1,0 +1,14 @@
+<launch>
+
+  <param name="use_sim_time" value="false" />
+  <include file="$(find pibot_bringup)/launch/robot.launch"/>
+
+
+  <include file="$(find pibot_navigation)/launch/include/move_base.launch.xml" />
+
+  <include file="$(find pibot_navigation)/launch/include/hector_mapping.launch.xml"/>
+  <include file="$(find pibot_navigation)/launch/include/geotiff_mapper.launch.xml">
+    <arg name="trajectory_source_frame_name" value="scanmatcher_frame"/>
+  </include>
+
+</launch>

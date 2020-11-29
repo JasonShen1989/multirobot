@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="pibot" type="navigation_multi_goals.py" respawn="false" name="navigation_multi_goals" output="screen">
+        <param name="goalListX" value="2.0, 1.0" />
+        <param name="goalListY" value="2.0, 3.0" />
+        <param name="goalListYaw" value="0.0, 90.0" /><!--degree--> 
+    </node>
+</launch>

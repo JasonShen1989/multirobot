@@ -1,0 +1,16 @@
+<launch>
+  <arg name="model" default="$(env PIBOT_MODEL)" doc="model type [apollo, zeus, hades, hera]"/>
+
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find pibot_description)/urdf/$(arg model).urdf'" />
+
+  <param name="robot_description" command="$(arg urdf_file)" />
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    	<param name="rate" value="20.0"/>
+  </node>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" >
+    	<param name="rate" value="20.0"/>
+  </node>
+  
+</launch>

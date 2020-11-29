@@ -1,2 +1,0 @@
-swarm_control
--DCATKIN_DEVEL_PREFIX=/home/shupeixuan/multirobot/devel -DCMAKE_INSTALL_PREFIX=/home/shupeixuan/multirobot/install -G Unix Makefiles

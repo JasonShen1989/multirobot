@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find pibot_bringup)/launch/robot.launch"/>
+
+  <param name="use_sim_time" value="false" />
+
+  <include file="$(find pibot_navigation)/launch/include/move_base.launch.xml" />
+
+  <include file="$(find pibot_navigation)/launch/include/karto_mapping.launch.xml" />
+  
+</launch>

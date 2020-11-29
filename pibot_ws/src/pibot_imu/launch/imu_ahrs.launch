@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="pibot_imu" type="pibot_imu" name="pibot_imu" output="screen" respawn="false" />
+
+  <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen" respawn="false" />
+
+</launch>

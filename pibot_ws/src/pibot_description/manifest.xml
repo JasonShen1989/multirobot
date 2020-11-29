@@ -1,0 +1,6 @@
+<package>
+  <description brief="pi_bot.SLDASM">pi_bot.SLDASM</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

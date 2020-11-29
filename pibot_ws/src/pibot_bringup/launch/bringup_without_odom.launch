@@ -1,0 +1,5 @@
+<launch>
+    <node name="pibot_driver" pkg="pibot_bringup" type="pibot_driver" output="screen">
+        <rosparam file="$(find pibot_bringup)/params/base_params_without_odom.yaml" command="load"/>
+    </node>
+</launch>

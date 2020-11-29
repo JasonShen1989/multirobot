@@ -1,0 +1,6 @@
+<launch>
+
+  <!--include file="$(find pibot_bringup)/launch/robot_without_odom.launch"/-->
+
+  <include file="$(find cartographer_ros)/launch/lidar_2d.launch"/>
+</launch>
