@@ -7,9 +7,9 @@
 一个地面站、一个路由器、一套nooploop空循环uwb
 
 地面站（我的笔记本）:
-1、运行roscore，作为rosmaster。
-2、usb口连接console，运行roslaunch nlink……，读取uwb的console数据发布所有标签位置的topic
-3、运行每个车的速度控制节点（其实也可以放在车上运行）。订阅所有标签位置并发送速度指令的node，这个node还会订阅车的磁罗盘数据并纠正车头方向。
+1、运行roscore，作为rosmaster。  
+2、usb口连接console，运行roslaunch nlink……，读取uwb的console数据发布所有标签位置的topic  
+3、运行每个车的速度控制节点（其实也可以放在车上运行）。订阅所有标签位置并发送速度指令的node，这个node还会订阅车的磁罗盘数据并纠正车头方向。  
 
 飞机：
 1、pixhawk或者tx2给uwb的tag标签供电即可。
