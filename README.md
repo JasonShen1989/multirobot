@@ -92,7 +92,13 @@ rostopic pub /command std_msgs/Int32 "data: 0"
 ```
 export ${your pibot_ws}/pibot_ws/devel/setup.bash 
 ```
-2、修改pibot_ws/pibot_bringup/launch/bringup_with_imu.launch，在<launch>下一行加上<group ns="car0">。并在</launch>上一行加上</group>,这样命名空间就在car0下了，所有话题前都会多一个car0/  
+2、修改pibot_ws/pibot_bringup/launch/bringup_with_imu.launch，首尾加上
+```
+<group ns="car0">
+……
+</group>
+```
+,这样命名空间就在car0下了，所有话题前都会多一个car0/  
 3、使用时运行roslaunch pibot_bringup bringup_with_imu.launch即可  
 
 ##### CAR1：
