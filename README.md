@@ -81,7 +81,7 @@ rostopic pub /command std_msgs/Int32 "data: 0" 可以发布控制指令。
 3、使用时运行roslaunch pibot_bringup bringup_with_imu.launch即可  
 
 ##### CAR1：
-同CAR0，改<group ns="car1">
+同CAR0，改 group ns="car1"  
 
 ##### CAR2
 同理  
