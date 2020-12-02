@@ -68,7 +68,7 @@ nlink_parser 的ros包编译前要先安装nlink的serial包!还要安装ros-mel
 
 2、下载本项目的multirobot_ws文件夹，并在该文件夹下编译catkin_make，并在~/.bashrc中最后一行添加环境变量  
 ```
-export ${your multirobot_ws}/multirobot_ws/devel/setup.bash
+source ${your multirobot_ws}/multirobot_ws/devel/setup.bash
 ```
 
 3、使用时运行以下sh文件即可启动nlink_parser标签读取和三个小车的控制节点：
@@ -90,7 +90,7 @@ rostopic pub /command std_msgs/Int32 "data: 0"
 ##### CAR0：
 1、下载本项目的pibot_ws文件夹，并在该文件夹下编译catkin_make，并在~/.bashrc中最后一行添加环境变量  
 ```
-export ${your pibot_ws}/pibot_ws/devel/setup.bash 
+source ${your pibot_ws}/pibot_ws/devel/setup.bash 
 ```
 2、修改pibot_ws/pibot_bringup/launch/bringup_with_imu.launch，首尾加上
 ```
