@@ -1,7 +1,0 @@
-<launch>
-  <node
-    name="rviz"
-    pkg="rviz"
-    type="rviz"
-    args="-d $(find pibot_description)/urdf.rviz" />
-</launch>

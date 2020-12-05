@@ -1,7 +1,0 @@
-<launch>
-<group ns="car0">
-    <node name="pibot_driver" pkg="pibot_bringup" type="pibot_driver" output="screen">
-        <rosparam file="$(find pibot_bringup)/params/base_params.yaml" command="load"/>
-    </node>
-</group>
-</launch>
